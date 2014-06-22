@@ -1,0 +1,12 @@
+v1
+
+./test-version.sh v1
+
+time: 43 seconds
+
+
+v2
+
+./test-version.sh v2
+
+time: 7 seconds
