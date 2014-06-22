@@ -31,7 +31,8 @@ class StatusRoutesSpec extends Specification with Specs2RouteTest with JsonProto
         status === StatusCodes.OK
         body.contentType === ContentTypes.`application/json`
         responseAs[Status].startTime === system.startTime
-        responseAs[Status].uptime > 0
+        responseAs[Status].uptime must beGreaterThanOrEqualTo(0)
+        responseAs[Status].noOfItems must beGreaterThanOrEqualTo(0)
       }
     }
 
