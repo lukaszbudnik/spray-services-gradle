@@ -41,7 +41,7 @@ class RestRoutesV2Spec extends Specification with Specs2RouteTest with JsonProto
         handled === true
         status === StatusCodes.OK
         body.contentType === ContentTypes.`application/json`
-        responseAs[ItemCreated].reference > 0
+        responseAs[ItemCreated].reference must beGreaterThanOrEqualTo(0L)
       }
     }
   }
